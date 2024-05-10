@@ -8,8 +8,8 @@ import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings()
 
 # Update the credentials based on your Lab Setup
-USERNAME = 'arista'
-PASSWORD = 'arista0kw4'
+USERNAME = 'username'
+PASSWORD = 'pwd'
 
 if __name__ == '__main__':
     client = CvpClient()
