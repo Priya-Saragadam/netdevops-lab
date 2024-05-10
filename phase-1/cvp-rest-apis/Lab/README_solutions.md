@@ -60,6 +60,7 @@ import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings()
 
 # Update the credentials based on your Lab Setup
+```
 USERNAME = 'username'
 PASSWORD = 'password'
 
@@ -71,4 +72,5 @@ if __name__ == '__main__':
     for i in range(len(ans_part1)):
         for j in keys:
             print(ans_part1[i][j])
+```
 The solutions for these challenges are present under `Solutions` folder, however we would encourage to try to figure our the solution from the REST API Explorer.
