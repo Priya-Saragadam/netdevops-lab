@@ -12,6 +12,7 @@ NOTE: Please feel free to login to CVP and take help from the `REST API Explorer
 - Authenticate and obtain a new session cookie from CVP and store it into file named `cvpcookiefile`
 
 API: `cvpservice/login/authenticate.do`
+
 Solution: 
 ```
 curl -X 'POST' 'https://cvp-url/cvpservice/login/authenticate.do' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{ "password":"pwd", "userID":"username"}' -c cookiefile | jq
@@ -21,6 +22,7 @@ curl -X 'POST' 'https://cvp-url/cvpservice/login/authenticate.do' -H 'accept: ap
 - Get the list of all containers currently on CVP
 
 API: `/cvpservice/inventory/containers`
+
 Solution: 
 ```
 curl -X 'GET' 'https://cvp-url/cvpservice/inventory/containers' -H 'accept: application/json' -b cvpcookiefile | jq
@@ -31,6 +33,7 @@ curl -X 'GET' 'https://cvp-url/cvpservice/inventory/containers' -H 'accept: appl
 - List of all devices that are in CVP inventory
 
 API: `cvpservice/inventory/devices`
+
 Solution: 
 ```
 curl -X 'GET' 'https://cvp-url/cvpservice/inventory/devices' -H 'accept: application/json' -b cvpcookiefile | jq
@@ -41,6 +44,7 @@ curl -X 'GET' 'https://cvp-url/cvpservice/inventory/devices' -H 'accept: applica
 - Get all configlets on CVP
 
 API: `cvpservice/configlet/getConfiglets.do`
+
 Solution: 
 ```
 curl -X 'GET' 'https://cvp-url/cvpservice/configlet/getConfiglets.do?startIndex=0&endIndex=0&sortOrder=Ascending' -H 'accept: application/json' -b cvpcookiefile | jq
@@ -51,6 +55,7 @@ curl -X 'GET' 'https://cvp-url/cvpservice/configlet/getConfiglets.do?startIndex=
 - Get list of all devices under container named `Leaf`
 
 API: `cvpservice/provisioning/getNetElementList.do`
+
 Solution: 
 ```
 curl -X 'GET' \
@@ -66,6 +71,7 @@ curl -X 'GET' \
   - EOS Version
   - IP Address
   - MAC Address
+
 Solution:
 ```
 from pprint import pprint as pp
